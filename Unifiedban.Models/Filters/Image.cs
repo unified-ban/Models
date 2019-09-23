@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Unifiedban.Models.Filters
 {
-    [Table("Filter_BadWord", Schema = "dbo")]
+    [Table("Filter_Image", Schema = "dbo")]
     public class Image
     {
         public enum State
