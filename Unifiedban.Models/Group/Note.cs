@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Unifiedban.Models.Group
 {
-    [Table("Group_NightSchedule", Schema = "dbo")]
+    [Table("Group_Note", Schema = "dbo")]
     public class Note
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
