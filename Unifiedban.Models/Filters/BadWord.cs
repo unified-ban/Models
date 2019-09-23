@@ -21,6 +21,7 @@ namespace Unifiedban.Models.Filters
         public string Name { get; set; }
         public string Regex { get; set; }
         public State Status { get; set; }
+        public DateTime UtcDate { get; set; }
         public int Match { get; set; }
     }
 }
