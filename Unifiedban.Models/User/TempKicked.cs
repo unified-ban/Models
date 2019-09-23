@@ -11,7 +11,8 @@ namespace Unifiedban.Models.User
         [Key]
         public int TelegramUserId { get; set; }
         [Key]
-        public int TelegramChatId { get; set; }
+        public string GroupId { get; set; }
+        public virtual Group.TelegramGroup Group { get; set; }
         public DateTime UtcDate { get; set; }
     }
 }

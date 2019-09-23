@@ -16,7 +16,8 @@ namespace Unifiedban.Models.Filters
         }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string BadWordId { get; set; }
-        public int? TelegramChatId { get; set; }
+        public string GroupId { get; set; }
+        public virtual Group.TelegramGroup Group { get; set; }
         [MaxLength(100)]
         public string Name { get; set; }
         public string Regex { get; set; }

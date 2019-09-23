@@ -10,7 +10,8 @@ namespace Unifiedban.Models.Group
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int NoteId { get; set; }
-        public int TelegramChatId { get; set; }
+        public string GroupId { get; set; }
+        public virtual TelegramGroup Group { get; set; }
         public string Tag { get; set; }
         public string Message { get; set; }
     }

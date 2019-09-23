@@ -19,7 +19,8 @@ namespace Unifiedban.Models.User
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int BannerUserId { get; set; }
         public int TelegramUserId { get; set; }
-        public int TelegramChatId { get; set; }
+        public string GroupId { get; set; }
+        public virtual Group.TelegramGroup Group { get; set; }
         public BanReasons Reason { get; set; }
         public DateTime UtcDate { get; set; }
     }

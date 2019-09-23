@@ -13,7 +13,8 @@ namespace Unifiedban.Models
         public string ActionLogId { get; set; }
         public string ActionTypeId { get; set; }
         public virtual ActionType ActionType { get; set; }
-        public int TelegramChatId { get; set; }
+        public string GroupId { get; set; }
+        public virtual Group.TelegramGroup Group { get; set; }
         public string Parameters { get; set; }
         public DateTime UtcDate { get; set; }
     }

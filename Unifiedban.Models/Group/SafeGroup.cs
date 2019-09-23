@@ -9,7 +9,8 @@ namespace Unifiedban.Models.Group
     public class SafeGroup
     {
         [Key]
-        public int? TelegramChatId { get; set; }
+        public string GroupId { get; set; }
+        public virtual TelegramGroup Group { get; set; }
         [Key]
         public string GroupName { get; set; }
     }
