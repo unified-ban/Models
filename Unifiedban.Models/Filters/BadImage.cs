@@ -6,8 +6,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Unifiedban.Models.Filters
 {
-    [Table("Filter_Image", Schema = "dbo")]
-    public class Image
+    [Table("Filter_BadImage", Schema = "dbo")]
+    public class BadImage
     {
         public enum State
         {
@@ -16,7 +16,7 @@ namespace Unifiedban.Models.Filters
             Active = 2
         }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string ImageId { get; set; }
+        public string BadImageId { get; set; }
         public int? TelegramChatId { get; set; }
         [MaxLength(100)]
         public string ParentImageId { get; set; }
