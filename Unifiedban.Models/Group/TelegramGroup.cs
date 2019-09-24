@@ -18,7 +18,7 @@ namespace Unifiedban.Models.Group
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string GroupId { get; set; }
-        public int TelegramChatId { get; set; }
+        public long TelegramChatId { get; set; }
         public string Title { get; set; }
         public Status State { get; set; }
         public string Configuration { get; set; }
@@ -27,6 +27,5 @@ namespace Unifiedban.Models.Group
         public string SettingsLanguage { get; set; }
         public int ReportChatId { get; set;}
         public string RulesText { get; set; }
-
     }
 }
