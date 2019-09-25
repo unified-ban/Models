@@ -16,7 +16,7 @@ namespace Unifiedban.Models
         }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string OperatorId { get; set; }
-        public string TelegramUserId { get; set; }
+        public int TelegramUserId { get; set; }
         public Levels Level { get; set; }
     }
 }
