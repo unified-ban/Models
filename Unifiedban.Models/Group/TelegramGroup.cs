@@ -25,7 +25,7 @@ namespace Unifiedban.Models.Group
         public string WelcomeText { get; set; }
         public string ChatLanguage { get; set; }
         public string SettingsLanguage { get; set; }
-        public int ReportChatId { get; set;}
+        public long ReportChatId { get; set;}
         public string RulesText { get; set; }
     }
 }
