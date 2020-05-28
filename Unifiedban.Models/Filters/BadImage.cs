@@ -3,23 +3,32 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 using System;
+using System.Drawing;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Unifiedban.Models
+namespace Unifiedban.Models.Filters
 {
-    [Table("Action", Schema = "log")]
-    public class ActionLog
+    [Table("Filter_BadImage", Schema = "dbo")]
+    public class BadImage
     {
-
+        public enum State
+        {
+            Disabled = 0,
+            Experimental = 1,
+            Active = 2
+        }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string ActionLogId { get; set; }
-        public string ActionTypeId { get; set; }
-        public virtual ActionType ActionType { get; set; }
+        public string BadImageId { get; set; }
         public string GroupId { get; set; }
         public virtual Group.TelegramGroup Group { get; set; }
-        public string Parameters { get; set; }
+        [MaxLength(100)]
+        public string ParentImageId { get; set; }
+        public string HashData { get; set; }
+        public RotateFlipType FlipType { get; set; }
+        public State Status { get; set; }
         public DateTime UtcDate { get; set; }
+        public int Match { get; set; }
     }
 }

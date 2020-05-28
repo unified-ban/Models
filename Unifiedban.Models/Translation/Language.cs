@@ -7,26 +7,25 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Unifiedban.Models.Filters
+namespace Unifiedban.Models.Translation
 {
-    [Table("Filter_BadWord", Schema = "dbo")]
-    public class BadWord
+    [Table("Language", Schema = "lang")]
+    public class Language
     {
         public enum State
         {
-            Disabled = 0,
-            Experimental = 1,
-            Active = 2
+            NotRready = 0,
+            Active = 1,
+            Disabled = 2
         }
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string BadWordId { get; set; }
-        public string GroupId { get; set; }
-        public virtual Group.TelegramGroup Group { get; set; }
+        public string LanguageId { get; set; }
         [MaxLength(100)]
+        [Required]
         public string Name { get; set; }
-        public string Regex { get; set; }
+        [MaxLength(20)]
+        [Required]
+        public string UniversalCode { get; set; }
+        [Required]
         public State Status { get; set; }
-        public DateTime UtcDate { get; set; }
-        public int Match { get; set; }
     }
 }

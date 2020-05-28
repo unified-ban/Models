@@ -12,9 +12,8 @@ namespace Unifiedban.Models.Group
     [Table("Group_SafeGroup", Schema = "dbo")]
     public class SafeGroup
     {
-        [Key]
-        public int TelegramChatId { get; set; }
-        [Key]
+        public string GroupId { get; set; }
+        public virtual TelegramGroup Group { get; set; }
         public string GroupName { get; set; }
     }
 }

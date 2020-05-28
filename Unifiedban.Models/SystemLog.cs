@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Unifiedban.Data
+namespace Unifiedban.Models
 {
     [Table("System", Schema = "log")]
     public class SystemLog
@@ -19,6 +19,12 @@ namespace Unifiedban.Data
             Warn,
             Error,
             Fatal
+        }
+
+        public enum ErrorCodes
+        {
+            OK,
+            Error
         }
 
         public int SystemLogId { get; set; }

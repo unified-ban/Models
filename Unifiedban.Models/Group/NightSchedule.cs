@@ -21,9 +21,10 @@ namespace Unifiedban.Models.Group
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string NightScheduleId { get; set; }
-        public int TelegramChatId { get; set; }
+        public string GroupId { get; set; }
+        public virtual TelegramGroup Group { get; set; }
         public Status State { get; set; }
-        public DateTime UtcStartDate { get; set; }
-        public DateTime UtcEndDate { get; set; }
+        public DateTime? UtcStartDate { get; set; } // start gate closure
+        public DateTime? UtcEndDate { get; set; } // end gate closure
     }
 }

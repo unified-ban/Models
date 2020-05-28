@@ -12,10 +12,9 @@ namespace Unifiedban.Models.User
     [Table("User_Flood", Schema = "dbo")]
     public class Flood
     {
-        [Key]
         public int TelegramUserId { get; set; }
-        [Key]
-        public int TelegramChatId { get; set; }
+        public string GroupId { get; set; }
+        public virtual Group.TelegramGroup Group { get; set; }
         public DateTime UtcDate { get; set; }
         [NotMapped]
         public int MessageCount { get; set; }

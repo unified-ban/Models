@@ -9,18 +9,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Unifiedban.Models
 {
-    [Table("Operator", Schema = "dbo")]
-    public class Operator
+    [Table("SysConfig", Schema = "config")]
+    public class SysConfig
     {
-        public enum Levels
-        {
-            Basic = 0,
-            Advanced = 1,
-            Super = 2
-        }
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string OperatorId { get; set; }
-        public int TelegramUserId { get; set; }
-        public Levels Level { get; set; }
+        [MaxLength(50)]
+        public string SysConfigId { get; set; }
+        public string Value { get; set; }
     }
 }

@@ -21,7 +21,8 @@ namespace Unifiedban.Models.Group
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string DashboardPermissionId { get; set; }
-        public int TelegramChatId { get; set; }
+        public string GroupId { get; set; }
+        public virtual TelegramGroup Group { get; set; }
         public string  DashboardUserId { get; set; }
         public virtual DashboardUser DashboardUser { get; set; }
         public Status State { get; set; }

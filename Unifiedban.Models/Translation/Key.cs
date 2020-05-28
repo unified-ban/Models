@@ -7,13 +7,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Unifiedban.Models
+namespace Unifiedban.Models.Translation
 {
-    [Table("ActionType", Schema = "dbo")]
-    public class ActionType
+    [Table("Key", Schema = "lang")]
+    public class Key
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string ActionTypeId { get; set; }
-        public string Name { get; set; }
+        public string KeyId { get; set; }
     }
 }

@@ -14,6 +14,7 @@ namespace Unifiedban.Models.Group
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string DashboardUserId { get; set; }
+        public int TelegramUserId { get; set; }
         public string Name { get; set; }
         public string ProfilePicture { get; set; }
         public DateTime LastActionUtc { get; set; }
