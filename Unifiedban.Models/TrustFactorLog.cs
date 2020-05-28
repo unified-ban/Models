@@ -10,7 +10,7 @@ using Unifiedban.Models.User;
 
 namespace Unifiedban.Models
 {
-    [Table("TrustFactorLog", Schema = "dbo")]
+    [Table("TrustFactorLog", Schema = "log")]
     public class TrustFactorLog
     {
         public enum TrustFactorAction
