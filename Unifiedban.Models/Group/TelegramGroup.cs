@@ -31,5 +31,9 @@ namespace Unifiedban.Models.Group
         public string SettingsLanguage { get; set; }
         public long ReportChatId { get; set;}
         public string RulesText { get; set; }
+        [MaxLength(20)]
+        public string InviteAlias { get; set; }
+        [MaxLength(150)]
+        public string InviteLink { get; set; }
     }
 }
