@@ -15,7 +15,7 @@ namespace Unifiedban.Models.User
         [MaxLength(100)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string TrustFactorId { get; set; }
-        public int TelegramUserId { get; set; }
+        public long TelegramUserId { get; set; }
         public int Points { get; set; } = 100;
     }
 }

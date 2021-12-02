@@ -16,7 +16,7 @@ namespace Unifiedban.Models
         public string OperationLogId { get; set; }
         public string GroupId { get; set; }
         public virtual Group.TelegramGroup Group { get; set; }
-        public int TelegramUserId { get; set; }
+        public long TelegramUserId { get; set; }
         [MaxLength(200)]
         public string Action { get; set; }
         [MaxLength(400)]

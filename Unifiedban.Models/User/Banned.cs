@@ -21,7 +21,7 @@ namespace Unifiedban.Models.User
         }
 
         [Key]
-        public int TelegramUserId { get; set; }
+        public long TelegramUserId { get; set; }
         public BanReasons Reason { get; set; }
         public DateTime UtcDate { get; set; }
     }

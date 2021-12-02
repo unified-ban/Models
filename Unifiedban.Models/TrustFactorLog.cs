@@ -28,7 +28,7 @@ namespace Unifiedban.Models
         public string TrustFactorId { get; set; }
         public virtual TrustFactor TrustFactor { get; set; }
         public TrustFactorAction Action { get; set; }
-        public int ActionTakenBy { get; set; }
+        public long ActionTakenBy { get; set; }
         public DateTime DateTime { get; set; }
     }
 }

@@ -22,7 +22,7 @@ namespace Unifiedban.Models
 
         public Chat Chat { get; set; }
         public string Text { get; set; }
-        public ParseMode ParseMode { get; set; } = ParseMode.Default;
+        public ParseMode ParseMode { get; set; } = ParseMode.Html;
         public bool DisableWebPagePreview { get; set; } = false;
         public bool DisableNotification { get; set; } = false;
         public int ReplyToMessageId { get; set; } = 0;
