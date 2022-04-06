@@ -15,7 +15,7 @@ namespace Unifiedban.Models
         [MaxLength(100)]
         public string DashboardSessionId { get; set; }
         public DateTime StartDateUtc { get; set; }
-        public int TelegramUserId { get; set; }
+        public long TelegramUserId { get; set; }
         public string TelegramFirstName { get; set; }
         public string TelegramLastName { get; set; }
         public string TelegramPhotoUrl { get; set; }
